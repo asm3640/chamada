@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'chamada/base.html' %}
+{% load static %}
 
-</body>
-</html>
+
+{% block conteudo %}
+    <h1 class="bg-primary"> Aqui </h1>
+    <form method="post" enctype="multipart/form-data">
+     {% csrf_token %}
+     {{ form }}
+        <input type="submit" value="Criar" class="btn-primary---">
+    </form>
+
+
+{% endblock conteudo %}
